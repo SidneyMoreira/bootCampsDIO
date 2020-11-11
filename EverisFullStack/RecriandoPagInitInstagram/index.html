@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Instagram</title>
+</head>
+<body>
+    <div class="instagram-wrapper">
+        <div class="instagram-phone">
+            <img src="./img/instagram-celular.png" alt="celular">
+            
+        </div>
+        <div class="instagram-continue">
+            <label for="input-dark-mode">
+                <a class="button">Modo dark</a>
+              </label>
+              <input type="checkbox" id="input-dark-mode">
+            <div class="group">
+                <img src="./img/instagram-logo.png" class="instagram-logo" alt="instagram logo">
+                <div class="profile-photo">
+                    <img src="./img/perfil-instagram.jpg" alt="photo perfil">
+                </div>
+                <a href="#" class="instagram-login">Continue como sidnei_moreira</a>
+                <a href="#" class="instagram-logout">remover conta</a>
+            </div>
+            <div class="group">
+                <p class="not-account">Não é sidnei_moreira?</p>
+                <p class="not-account">
+                    <span class="link-blue">Alternar contas</span>
+                    ou
+                    <span class="link-blue">Inscreva-se</span>
+                </p>
+            </div>
+            <div class="get-the-app">
+                <p class="get-app">Baixe o Aplicativo</p>
+                <div class="download">
+                    <a href="#" class="app-download"></a>
+                    <a href="#" class="app-download"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+          const darkModeStorage = localStorage.getItem('dark-mode')
+          const body = document.querySelector('body')
+          const inputDarkMode = document.getElementById('input-dark-mode')
+    
+          if(darkModeStorage){
+            body.setAttribute("dark", "true")
+          }
+    
+          inputDarkMode.addEventListener('change', () => {
+            if(inputDarkMode.checked){
+              body.setAttribute("dark", "true")
+              localStorage.setItem('dark-mode', true)
+            }else{
+              body.removeAttribute("dark")
+              localStorage.removeItem('dark-mode')
+            }
+          })
+    
+        })
+    
+      </script>
+</body>
+</html>
