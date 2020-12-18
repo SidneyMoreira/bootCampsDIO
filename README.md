@@ -8,6 +8,6 @@ Repositorio dos BootCamps feito na DIO:
 - [Recriando a página inicial do Instagram](https://github.com/SidneyMoreira/bootCampsDIO/tree/master/EverisFullStack/RecriandoPagInitInstagram)
 - [Recriando a Interface do Netfix](https://github.com/SidneyMoreira/bootCampsDIO/tree/master/EverisFullStack/RecriandoInterfaceNetflix)
 - [Introdução ao Angular 8](https://github.com/SidneyMoreira/bootCampsDIO/tree/master/EverisFullStack/IntroducaoAngular8)
-- [Técnicas Avançadas em Angular 8]()
-- [Requisitando Dados de uma API de Criptomoedas]()
+- [Técnicas Avançadas em Angular 8](https://github.com/SidneyMoreira/bootCampsDIO/tree/master/EverisFullStack/TecnicasAvancadaEmAngula8)
+- [Requisitando Dados de uma API de Criptomoedas](https://github.com/SidneyMoreira/bootCampsDIO/tree/master/EverisFullStack/DesenvWebComAPiCriptoMoedas)
 
