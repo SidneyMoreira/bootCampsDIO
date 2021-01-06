@@ -10,4 +10,5 @@ Repositorio dos BootCamps feito na DIO:
 - [Introdução ao Angular 8](https://github.com/SidneyMoreira/bootCampsDIO/tree/master/EverisFullStack/IntroducaoAngular8)
 - [Técnicas Avançadas em Angular 8](https://github.com/SidneyMoreira/bootCampsDIO/tree/master/EverisFullStack/TecnicasAvancadaEmAngula8)
 - [Requisitando Dados de uma API de Criptomoedas](https://github.com/SidneyMoreira/bootCampsDIO/tree/master/EverisFullStack/DesenvWebComAPiCriptoMoedas)
+- [Criando projeto para consultar a previsão do tempo via API]()
 
