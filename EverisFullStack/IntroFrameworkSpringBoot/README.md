@@ -12,8 +12,8 @@ Eu usei os recursos da *Extensions*  no VS Code.
 
 Introdução ao framework Spring Boot 
 
-- [Projeto Aula: O que é Spring Boot?]()
-- [Projeto Aula: Profiles e Configurações]()
+- [Projeto Aula: O que é Spring Boot?](https://github.com/SidneyMoreira/bootCampsDIO/tree/master/EverisFullStack/IntroFrameworkSpringBoot/springboot)
+- [Projeto Aula: Profiles e Configurações](https://github.com/SidneyMoreira/bootCampsDIO/tree/master/EverisFullStack/IntroFrameworkSpringBoot/springbootconfig)
 
 
 
@@ -21,5 +21,9 @@ Introdução ao framework Spring Boot
 
 - [Java Extension Pack](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
 
-**<!--Ps.: Não instalei o Maven.-->**
+------
+
+**Ps.: Não instalei o Maven.**
+
+------
 
