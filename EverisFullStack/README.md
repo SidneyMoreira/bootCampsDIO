@@ -68,5 +68,5 @@
 - **Desenvolvendo um sistema de gerenciamento de pessoas em API REST com Spring Booot**
 
   - [Link Projeto exemplo professor](https://github.com/rpeleias/personapi_digital_innovation_one)
-  - Link Projeto Alterado para versão 12 Java e atualizada as dependências
+  - [Link Projeto Alterado para versão 12 Java e atualizada as dependências](https://github.com/SidneyMoreira/bootCampsDIO/tree/master/EverisFullStack/DevSistemaGerenciamentoPessoasAPI_Rest_SpringBoot/personapi_maven)
 
