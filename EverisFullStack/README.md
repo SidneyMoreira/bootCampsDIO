@@ -16,13 +16,13 @@
 
 - [Criando projeto para consultar a previsão do tempo via API](https://github.com/SidneyMoreira/bootCampsDIO/tree/master/EverisFullStack/CriandoProjPrevTempoAPI/jv-weather)
 
-- Aplicações Avançadas com Angular ( Projetos Exemplos do Professor)
+- **Aplicações Avançadas com Angular ( Projetos Exemplos do Professor)**
 
   - [JV-State](https://github.com/JGhignatti/jv-state)
   - [JV-State-Ngrx](https://github.com/JGhignatti/jv-state-ngrx)
   - [JV-Control-Value-Accessor](https://github.com/JGhignatti/jv-control-value-accessor)
 
-- Desenvolvimento Básico em Java  ( Projetos Exemplos dos Professores)
+- **Desenvolvimento Básico em Java  ( Projetos Exemplos dos Professores)**
 
   ###### 		André Luis Gomes
 
@@ -36,14 +36,37 @@
 
 - [Implementando Collections e Streams com Java (Projetos Exemplos do Professor)](https://github.com/wesleyfuchter/collections-course)
 
-- Desenvolvimento Avançado em Java (Projetos Exemplos do Professor)
+- **Desenvolvimento Avançado em Java (Projetos Exemplos do Professor)**
 
   - [Java-Avançado](https://github.com/jpbaterabsb/java-avancado)
   - [Java-Modular](https://github.com/jpbaterabsb/java-modular)
 
-- Introdução ao framework Spring Boot 
+- **Introdução ao framework Spring Boot** 
 
   - [Spring Boot: O que é Spring Boot? (Projeto Exemplo do Professor)](https://github.com/rpeleias/springboot_digital_innovation_one)
   - [Spring Boot: Profiles e Configurações (Projeto Exemplo do Professor)](https://github.com/rpeleias/springbootprofile_digital_innovation_one)
   - [Projeto com minhas alterações (Java 12)](https://github.com/SidneyMoreira/bootCampsDIO/tree/master/EverisFullStack/IntroFrameworkSpringBoot)
+
+- **Criando aplicações web com Spring Web MVC**
+
+  - [Aplicações REST com Spring Web MVC-Básico]()
+    - [Link Projetos exemplos professor](https://github.com/andrelugomes/global-labs-academy)
+  - [Aplicações REST com Spring Web MVC-Intermediario]()
+    - [Link Projeto exemplo professor](https://github.com/glauber-barboza/digitalinnovation-jaxrs)
+  - **Aprenda sobre hateoas e filters em recursos com REST(Links Projetos exemplo professor)**
+    - [Hateoas](https://github.com/glauber-barboza/digitalinnovation-hateoas-init)
+    - [Filters](https://github.com/glauber-barboza/digitalinnovation-filters)
+  - [Como jackson e Binder são utilizados (Link Projeto exemplo professor)](https://github.com/glauber-barboza/digitalinnovation-jackson)
+  - [Integrações REST entre Aplicações usando Spring Web (Link Projeto exemplo professor)](https://github.com/glauber-barboza/spring-web)
+  - [Testes de aplicações Spring Web (Link Projeto exemplo professor)](https://github.com/glauber-barboza/digitalinovation-mockmvc)
+
+- ##### Trabalhando com Banco de Dados utilizando JDBC e JPAs
+
+  - [Introdução ao JDBC](https://github.com/danielkv7/jdbc-basico)
+  - [Trabalhando com JPA](https://github.com/danielkv7/jpa-basico)
+  
+- **Desenvolvendo um sistema de gerenciamento de pessoas em API REST com Spring Booot**
+
+  - [Link Projeto exemplo professor](https://github.com/rpeleias/personapi_digital_innovation_one)
+  - Link Projeto Alterado para versão 12 Java e atualizada as dependências
 
