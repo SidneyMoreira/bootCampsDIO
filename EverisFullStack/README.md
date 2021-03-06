@@ -68,7 +68,7 @@
 - **Desenvolvendo um sistema de gerenciamento de pessoas em API REST com Spring Booot**
 
   - [Link Projeto exemplo professor](https://github.com/rpeleias/personapi_dio_live_coding)
-  - [Link Projeto Alterado para versão do Java e das dependências](https://github.com/SidneyMoreira/bootCampsDIO/tree/master/EverisFullStack/DevSistemaGerenciamentoPessoasAPI_Rest_SpringBoot/personapi_maven)
+  - [Link Projeto Alterado para versão do Java e das dependências](https://github.com/SidneyMoreira/bootCampsDIO/tree/master/EverisFullStack/DevSistGerePessoasAPI_Rest_SpringBoot/personapi_maven)
     - Atualização para Java 15
     - Spring Boot 2.4.3
     - Inserido o hibernate-validator 7.0.1.final 
