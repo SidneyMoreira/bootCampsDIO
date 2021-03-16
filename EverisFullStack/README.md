@@ -76,5 +76,7 @@
 
 - [Crie seu Gerenciados de Salas de Reuniões com Java e Angular](https://github.com/SidneyMoreira/bootCampsDIO/tree/master/EverisFullStack/CrieGerencSalasReunioesJavaeAngular)
 
+- [Desenvolvimento de testes unitários para validar uma API REST de gerenciamento estoques de cerveja]()
+
   
 
