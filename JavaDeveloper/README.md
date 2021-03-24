@@ -1,7 +1,6 @@
 # BootCamp Java Developer
 
-![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) **`Obs.: Vários módulos deste BootCamp é compartilhado com o BootCamp Everis FullStack Developer, então colocarei os links para o mesmo para que não ocorra duplicidade de projetos no GitHub.`**
-
+⚠️⚠️⁉️⁉️⁉️**Obs.: Vários módulos deste BootCamp é compartilhado com o BootCamp Everis FullStack Developer, então colocarei os links para o mesmo para que não ocorra duplicidade de projetos no GitHub.**⁉️⁉️⁉️⚠️⚠️
 
 
 - [Introdução ao Git & Github]( https://github.com/SidneyMoreira/bootCampsDIO/tree/master/EverisFullStack/IntroGitGithub/workspace/livro-receitas)
@@ -65,6 +64,8 @@
     - MapStruct 1.4.2.Final
 
 - [Construindo uma API Rest de consulta de cidades do Brasil do zero até a produção](https://github.com/SidneyMoreira/bootCampsDIO/tree/master/JavaDeveloper/ConstrAPI_RestConsultaCidBrasilZeroAteProd)
+
+- [Introdução a JSF para aplicação web]()
 
 - [Crie seu Gerenciados de Salas de Reuniões com Java e Angular](https://github.com/SidneyMoreira/bootCampsDIO/tree/master/EverisFullStack/CrieGerencSalasReunioesJavaeAngular)
 
