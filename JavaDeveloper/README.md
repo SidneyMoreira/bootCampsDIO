@@ -64,7 +64,7 @@
     - Inserido o hibernate-validator 7.0.1.final 
     - MapStruct 1.4.2.Final
 
-- [Construindo uma API Rest de consulta de cidades do Brasil do zero até a produção]()
+- [Construindo uma API Rest de consulta de cidades do Brasil do zero até a produção](https://github.com/SidneyMoreira/bootCampsDIO/tree/master/JavaDeveloper/ConstrAPI_RestConsultaCidBrasilZeroAteProd)
 
 - [Crie seu Gerenciados de Salas de Reuniões com Java e Angular](https://github.com/SidneyMoreira/bootCampsDIO/tree/master/EverisFullStack/CrieGerencSalasReunioesJavaeAngular)
 

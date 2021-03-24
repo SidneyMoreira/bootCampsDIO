@@ -69,7 +69,7 @@ select earth_distance(
 
 ## Query Test Postman
 
-- [Cities.postman_collection]()
+- [Cities.postman_collection]([https://github.com/SidneyMoreira/bootCampsDIO/tree/master/JavaDeveloper/ConstrAPI_RestConsultaCidBrasilZeroAteProd/cities-api/src/Postman)
 
 ## Spring Boot
 
