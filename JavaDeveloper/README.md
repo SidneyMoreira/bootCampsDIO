@@ -1,6 +1,6 @@
 # BootCamp Java Developer
 
-**Obs.: Vários módulos deste BootCamp é compartilhado com o BootCamp Everis FullStack Developer, então colocarei os links para o mesmo para que não ocorra duplicidade de projetos no GitHub.**
+![#f03c15]**Obs.: Vários módulos deste BootCamp é compartilhado com o BootCamp Everis FullStack Developer, então colocarei os links para o mesmo para que não ocorra duplicidade de projetos no GitHub.**
 
 
 
