@@ -1,9 +1,15 @@
 # BootCamp Java Developer
 
-⚠️⚠️⁉️⁉️⁉️**Obs.: Vários módulos deste BootCamp é compartilhado com o BootCamp Everis FullStack Developer, então colocarei os links para o mesmo para que não ocorra duplicidade de projetos no GitHub.**⁉️⁉️⁉️⚠️⚠️
+⚠️⚠️⁉️⁉️⁉️
 
+**Obs.: Vários módulos deste BootCamp é compartilhado com o BootCamp Everis FullStack Developer, então colocarei os links para o mesmo para que não ocorra duplicidade de projetos no GitHub.**
+
+⁉️⁉️⁉️⚠️⚠️
+
+------
 
 - [Introdução ao Git & Github]( https://github.com/SidneyMoreira/bootCampsDIO/tree/master/EverisFullStack/IntroGitGithub/workspace/livro-receitas)
+
 
 - [Introduçao a criação de websites com HTML5 e CSS3](https://github.com/SidneyMoreira/bootCampsDIO/tree/master/EverisFullStack/IntroCriaWebSitesHTMLeCSS3)
 

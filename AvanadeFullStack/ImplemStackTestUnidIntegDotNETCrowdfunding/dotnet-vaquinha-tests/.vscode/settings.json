@@ -1,0 +1,9 @@
+{
+	"dotnet-test-explorer.testProjectPath": "**/*.Tests.csproj",
+	"dotnet-test-explorer.runInParallel": true,
+	"csharp.semanticHighlighting.enabled": true,
+	"omnisharp.enableImportCompletion": true,
+	"omnisharp.organizeImportsOnFormat": true,
+	"dotnet-test-explorer.autoWatch": true
+
+}
