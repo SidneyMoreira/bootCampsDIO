@@ -1,0 +1,15 @@
+/Users/kadarpegasus/Projects/bootCampsDIO/DotNetFundamentals/PrimeirosPassosComDoNetPlusCSharp/01-EstruturaDoPrograma/bin/Debug/net5.0/01-EstruturaDoPrograma.deps.json
+/Users/kadarpegasus/Projects/bootCampsDIO/DotNetFundamentals/PrimeirosPassosComDoNetPlusCSharp/01-EstruturaDoPrograma/bin/Debug/net5.0/01-EstruturaDoPrograma.runtimeconfig.json
+/Users/kadarpegasus/Projects/bootCampsDIO/DotNetFundamentals/PrimeirosPassosComDoNetPlusCSharp/01-EstruturaDoPrograma/bin/Debug/net5.0/01-EstruturaDoPrograma.runtimeconfig.dev.json
+/Users/kadarpegasus/Projects/bootCampsDIO/DotNetFundamentals/PrimeirosPassosComDoNetPlusCSharp/01-EstruturaDoPrograma/bin/Debug/net5.0/01-EstruturaDoPrograma.dll
+/Users/kadarpegasus/Projects/bootCampsDIO/DotNetFundamentals/PrimeirosPassosComDoNetPlusCSharp/01-EstruturaDoPrograma/bin/Debug/net5.0/ref/01-EstruturaDoPrograma.dll
+/Users/kadarpegasus/Projects/bootCampsDIO/DotNetFundamentals/PrimeirosPassosComDoNetPlusCSharp/01-EstruturaDoPrograma/bin/Debug/net5.0/01-EstruturaDoPrograma.pdb
+/Users/kadarpegasus/Projects/bootCampsDIO/DotNetFundamentals/PrimeirosPassosComDoNetPlusCSharp/01-EstruturaDoPrograma/obj/Debug/net5.0/01-EstruturaDoPrograma.csprojAssemblyReference.cache
+/Users/kadarpegasus/Projects/bootCampsDIO/DotNetFundamentals/PrimeirosPassosComDoNetPlusCSharp/01-EstruturaDoPrograma/obj/Debug/net5.0/01-EstruturaDoPrograma.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kadarpegasus/Projects/bootCampsDIO/DotNetFundamentals/PrimeirosPassosComDoNetPlusCSharp/01-EstruturaDoPrograma/obj/Debug/net5.0/01-EstruturaDoPrograma.AssemblyInfoInputs.cache
+/Users/kadarpegasus/Projects/bootCampsDIO/DotNetFundamentals/PrimeirosPassosComDoNetPlusCSharp/01-EstruturaDoPrograma/obj/Debug/net5.0/01-EstruturaDoPrograma.AssemblyInfo.cs
+/Users/kadarpegasus/Projects/bootCampsDIO/DotNetFundamentals/PrimeirosPassosComDoNetPlusCSharp/01-EstruturaDoPrograma/obj/Debug/net5.0/01-EstruturaDoPrograma.csproj.CoreCompileInputs.cache
+/Users/kadarpegasus/Projects/bootCampsDIO/DotNetFundamentals/PrimeirosPassosComDoNetPlusCSharp/01-EstruturaDoPrograma/obj/Debug/net5.0/01-EstruturaDoPrograma.dll
+/Users/kadarpegasus/Projects/bootCampsDIO/DotNetFundamentals/PrimeirosPassosComDoNetPlusCSharp/01-EstruturaDoPrograma/obj/Debug/net5.0/ref/01-EstruturaDoPrograma.dll
+/Users/kadarpegasus/Projects/bootCampsDIO/DotNetFundamentals/PrimeirosPassosComDoNetPlusCSharp/01-EstruturaDoPrograma/obj/Debug/net5.0/01-EstruturaDoPrograma.pdb
+/Users/kadarpegasus/Projects/bootCampsDIO/DotNetFundamentals/PrimeirosPassosComDoNetPlusCSharp/01-EstruturaDoPrograma/obj/Debug/net5.0/01-EstruturaDoPrograma.genruntimeconfig.cache

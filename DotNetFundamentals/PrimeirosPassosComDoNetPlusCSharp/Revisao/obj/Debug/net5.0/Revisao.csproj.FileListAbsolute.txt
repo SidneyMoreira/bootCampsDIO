@@ -1,0 +1,15 @@
+/Users/kadarpegasus/Projects/bootCampsDIO/DotNetFundamentals/PrimeirosPassosComDoNetPlusCSharp/Revisao/bin/Debug/net5.0/Revisao.deps.json
+/Users/kadarpegasus/Projects/bootCampsDIO/DotNetFundamentals/PrimeirosPassosComDoNetPlusCSharp/Revisao/bin/Debug/net5.0/Revisao.runtimeconfig.json
+/Users/kadarpegasus/Projects/bootCampsDIO/DotNetFundamentals/PrimeirosPassosComDoNetPlusCSharp/Revisao/bin/Debug/net5.0/Revisao.runtimeconfig.dev.json
+/Users/kadarpegasus/Projects/bootCampsDIO/DotNetFundamentals/PrimeirosPassosComDoNetPlusCSharp/Revisao/bin/Debug/net5.0/Revisao.dll
+/Users/kadarpegasus/Projects/bootCampsDIO/DotNetFundamentals/PrimeirosPassosComDoNetPlusCSharp/Revisao/bin/Debug/net5.0/ref/Revisao.dll
+/Users/kadarpegasus/Projects/bootCampsDIO/DotNetFundamentals/PrimeirosPassosComDoNetPlusCSharp/Revisao/bin/Debug/net5.0/Revisao.pdb
+/Users/kadarpegasus/Projects/bootCampsDIO/DotNetFundamentals/PrimeirosPassosComDoNetPlusCSharp/Revisao/obj/Debug/net5.0/Revisao.csprojAssemblyReference.cache
+/Users/kadarpegasus/Projects/bootCampsDIO/DotNetFundamentals/PrimeirosPassosComDoNetPlusCSharp/Revisao/obj/Debug/net5.0/Revisao.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kadarpegasus/Projects/bootCampsDIO/DotNetFundamentals/PrimeirosPassosComDoNetPlusCSharp/Revisao/obj/Debug/net5.0/Revisao.AssemblyInfoInputs.cache
+/Users/kadarpegasus/Projects/bootCampsDIO/DotNetFundamentals/PrimeirosPassosComDoNetPlusCSharp/Revisao/obj/Debug/net5.0/Revisao.AssemblyInfo.cs
+/Users/kadarpegasus/Projects/bootCampsDIO/DotNetFundamentals/PrimeirosPassosComDoNetPlusCSharp/Revisao/obj/Debug/net5.0/Revisao.csproj.CoreCompileInputs.cache
+/Users/kadarpegasus/Projects/bootCampsDIO/DotNetFundamentals/PrimeirosPassosComDoNetPlusCSharp/Revisao/obj/Debug/net5.0/Revisao.dll
+/Users/kadarpegasus/Projects/bootCampsDIO/DotNetFundamentals/PrimeirosPassosComDoNetPlusCSharp/Revisao/obj/Debug/net5.0/ref/Revisao.dll
+/Users/kadarpegasus/Projects/bootCampsDIO/DotNetFundamentals/PrimeirosPassosComDoNetPlusCSharp/Revisao/obj/Debug/net5.0/Revisao.pdb
+/Users/kadarpegasus/Projects/bootCampsDIO/DotNetFundamentals/PrimeirosPassosComDoNetPlusCSharp/Revisao/obj/Debug/net5.0/Revisao.genruntimeconfig.cache
