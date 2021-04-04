@@ -103,6 +103,8 @@ namespace Revisao
                         new ArgumentOutOfRangeException();
                         break;
                 }
+                Console.WriteLine("Obrigado por utilizar nossos serviços!!");
+                Console.ReadKey();
             }
 
 
