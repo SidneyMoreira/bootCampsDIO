@@ -1,0 +1,3 @@
+# Criando um APP simples de Cadastro de séries em .NET
+
+Nesse projeto simples de cadastro de séries foi mostrado como trabalhar com interfaces, repositórios para uma melhor aproveitamento do paradigma de OO. Em cima da proposta do professor fiz algumas alterações conforme as sugestões que ele estava passando, tirando métodos que no projeto original ficavam na Main do programa e colocando em um classe separada.
