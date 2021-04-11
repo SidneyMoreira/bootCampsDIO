@@ -7,15 +7,15 @@
 - Desenvolvimento de aplicações com .NET
   - Conheça o Entity Framework e crie aplicações ASP.NET
   - Criando e testando uma aplicação ASP.NET API e publicando na Cloud
-- [Construindo um projeto de uma API.NET integrada ao MongoDB]()
+- [Construindo um projeto de uma API.NET integrada ao MongoDB](https://github.com/SidneyMoreira/bootCampsDIO/tree/master/AvanadeFullStack/ConstProjAPIDotNetIntegMongoDB)
 - Conceitos Melhores Práticas com banco de Dados PostgreSQL
 - [Introduçao a criação de websites com HTML5 e CSS3](https://github.com/SidneyMoreira/bootCampsDIO/tree/master/EverisFullStack/IntroCriaWebSitesHTMLeCSS3)
 - [Implementando sua stack de testes de unidade e integrados em um projeto .NET de Crowdfunding](https://github.com/SidneyMoreira/bootCampsDIO/tree/master/AvanadeFullStack/ImplemStackTestUnidIntegDotNETCrowdfunding )
 
 
 - [Recriando a página inicial do Instagram](https://github.com/SidneyMoreira/bootCampsDIO/tree/master/EverisFullStack/RecriandoPagInitInstagram)
-- Programação para Internet com JavaScript *
-- JavaScript ES6 Essencial *
+- [Programação para Internet com JavaScript](https://github.com/SidneyMoreira/bootCampsDIO/tree/master/AvanadeFullStack/ProgramInternetComJavaScript)
+- [JavaScript ES6 Essencial](https://github.com/SidneyMoreira/bootCampsDIO/tree/master/AvanadeFullStack/JavaScritpES6_Essencial)
 - [Recriando a Interface do Netfix](https://github.com/SidneyMoreira/bootCampsDIO/tree/master/EverisFullStack/RecriandoInterfaceNetflix)
 - Introdução a Programação com JavaScript
 - Desmetificando map, filter e reduce
