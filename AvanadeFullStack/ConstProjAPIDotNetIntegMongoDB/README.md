@@ -1,6 +1,6 @@
 # Construindo um projeto de uma API.NET integrada ao MongoDB
 
-Neste projeto de API foi ensinado como trabalhar com .NET Core e como utilizar o MongoDB Atlas criando um cluster para armazenar as informações e também ter a string de conexão para conectar-se ao MongoDB de uma forma prática e rápida. 
+Neste projeto de API foi ensinado como trabalhar com .NET Core integrada a um cluster MongoDB, criando em tempo real no service cloud Mongo Atlas para armazenar as informações. Teve uma rápida explicação dos conceitos básicos de front-end, Back-end, bases de dados, NoSql e MongoDB para fixar o entendimento e sua aplicabilidade.
 
 Para teste:
 
