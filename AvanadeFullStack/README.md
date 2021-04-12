@@ -26,4 +26,4 @@
 - [Criando projeto para consultar a previsão do tempo via API](https://github.com/SidneyMoreira/bootCampsDIO/tree/master/EverisFullStack/CriandoProjPrevTempoAPI/jv-weather)
 - [Técnicas Avançadas em Angular 8](https://github.com/SidneyMoreira/bootCampsDIO/tree/master/EverisFullStack/TecnicasAvancadaEmAngula8)
 - Aplicações Avançadas com Angular
-- Utilizando o Cypress E2E para testar um Blog em Angular
+- [Utilizando o Cypress E2E para testar um Blog em Angular](https://github.com/SidneyMoreira/bootCampsDIO/tree/master/AvanadeFullStack/UtilCypresE2ETestBlogAngular)
