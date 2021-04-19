@@ -1,0 +1,22 @@
+
+version: '3'
+
+services:
+
+  elasticsearch:
+    container_name: "elasticsearch"
+    image: elasticsearch:7.12.0
+    ports:
+      - 9200:9200
+      - 9300:9300
+    environment:
+      - discovery.type=single-node
+
+  redis:
+    container_name: "redis"
+    image: redis:latest
+    ports:
+      - 6379:6379
+
+
+
