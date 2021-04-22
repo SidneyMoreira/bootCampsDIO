@@ -1,4 +1,4 @@
-package com.avanade.dio.jwt.controller;
+package com.avanade.dio.jwt.security;
 
 public class SecurityConstants {
     public static final String SECRET = "SecretKeyToGenJWTs";

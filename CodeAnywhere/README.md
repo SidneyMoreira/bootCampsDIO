@@ -1,5 +1,11 @@
 # BootCamp Code Anywhere
 
+⚠️⚠️⁉️⁉️⁉️
+
+**Obs.: Vários módulos deste BootCamp é compartilhado com o BootCamp Everis FullStack Developer e Java Developer, então colocarei os links para os mesmo para que não ocorra duplicidade de projetos no GitHub.**
+
+⁉️⁉️⁉️⚠️⚠️
+
 - [Introdução ao Git & Github]( https://github.com/SidneyMoreira/bootCampsDIO/tree/master/EverisFullStack/IntroGitGithub/workspace/livro-receitas)
 
 - [SQL SERVER - Criando suas primeiras consultas](https://github.com/SidneyMoreira/bootCampsDIO/tree/master/DotNetFundamentals/SQL_SERVER_CriaPrimConsultas)
@@ -47,4 +53,4 @@
 
 - [Deploy de aplicações spring boot no Azure]()
 
-- Criando API Gateways no ambiente Azure Spring Cloud
+- [Criando API Gateways no ambiente Azure Spring Cloud]()
