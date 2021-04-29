@@ -13,7 +13,7 @@ public class EntregaCartaoApp {
 		Cliente cliente = new Cliente();
 		
 		try {
-			cliente.adicionarEndereco(endereco);
+			cliente.adicionaEndereco(endereco);
 			System.out.println("Endereço inserido com sucesso");
 		} catch (Exception e) {
 			System.err.println("Houve um erro ao adiconar o endereco" + e.getMessage());

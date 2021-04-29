@@ -8,7 +8,7 @@ public class Cliente extends Pessoa{
 	public String numCartao;
 	private List<Endereco> endereco;
 	
-	public void adicionarEndereco(Endereco endereco) {
+	public void adicionaEndereco(Endereco endereco) {
 		if (endereco == null) {
 			throw new RuntimeException("Endereço nao pode ser nulo");
 		}
