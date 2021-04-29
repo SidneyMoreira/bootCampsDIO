@@ -1,0 +1,7 @@
+version: "3"
+services:
+  app:
+    image: sidmoreira/finance
+    container_name: "app_finance_dio"
+    ports:
+      - 8080:8080
