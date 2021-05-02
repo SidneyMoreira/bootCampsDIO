@@ -11,7 +11,5 @@ Repositorio dos BootCamps feito na DIO:
 
 5. #### [Code Anywhere](https://github.com/SidneyMoreira/bootCampsDIO/tree/master/CodeAnywhere)
 
-6. #### [Take Blip Fullstack Developer]()
-
 7. #### [Labs Semana DIO Pro](https://github.com/SidneyMoreira/bootCampsDIO/tree/main/LabsPro)
 
