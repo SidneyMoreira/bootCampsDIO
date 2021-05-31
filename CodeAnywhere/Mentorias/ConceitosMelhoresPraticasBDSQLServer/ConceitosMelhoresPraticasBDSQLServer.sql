@@ -1,0 +1,88 @@
+-- criando da BD:
+CREATE DATABASE dio_maio;
+
+-- criando tabel produtos:
+CREATE TABLE produtos
+(
+    CODIGO         INT          NOT NULL
+    ,DESCRICAO      VARCHAR(50) NOT NULL
+    ,DATA_VALIDADE  DATETIME
+    ,EAN            VARCHAR(15) NOT NULL
+    ,IND_INATIVO    INT         NOT NULL DEFAULT 0
+);
+
+ALTER TABLE produtos 
+  ADD CONSTRAINT PK_PRODUTOS 
+    PRIMARY KEY (CODIGO)
+;
+
+CREATE INDEX IDX_PRODUTOS_EAN
+          ON produtos(EAN)
+;
+
+INSERT INTO produtos VALUES (1,'Produto 1', GETDATE(), '7898392930332',0)
+
+INSERT INTO produtos(CODIGO,DESCRICAO,EAN) VALUES (2,'Produto 2', '7898392930334')
+
+SELECT * 
+  FROM produtos 
+ WHERE CODIGO = 2;
+
+SELECT * 
+  FROM produtos 
+ WHERE DESCRICAO LIKE '%2';
+
+SELECT COUNT(*) as Total
+  FROM produtos;
+
+-- criando tabel loja:
+CREATE TABLE lojas
+(
+    CODIGO          INT         NOT NULL
+    ,NOME           VARCHAR(50) NOT NULL
+    ,IND_INATIVO    INT NOT NULL DEFAULT 0,
+
+    CONSTRAINT PK_LOJA PRIMARY KEY (CODIGO)
+);
+
+INSERT INTO lojas (CODIGO, NOME) VALUES (1000, 'Filial Araraquara');
+INSERT INTO lojas (CODIGO, NOME) VALUES (1001, 'Filial São Paulo');
+INSERT INTO lojas (CODIGO, NOME) VALUES (1002, 'Filial Recife');
+
+SELECT * FROM lojas;
+
+-- criando tabela estoque:
+
+CREATE TABLE estoque (
+    CODIGO_PRODUTO      INT         NOT NULL
+    ,CODIGO_FILIAL      INT         NOT NULL
+    ,QUANTIDADE         DECIMAL     NOT NULL DEFAULT 0
+
+    CONSTRAINT PK_ESTOQUE PRIMARY KEY (CODIGO_PRODUTO,CODIGO_FILIAL)
+);
+
+ALTER TABLE estoque 
+  ADD CONSTRAINT FK_ESTOQUE_PRODUTOS 
+    FOREIGN KEY (CODIGO_PRODUTO)
+    REFERENCES produtos(CODIGO)
+;
+
+ALTER TABLE estoque 
+  ADD CONSTRAINT FK_ESTOQUE_LOJAS 
+    FOREIGN KEY (CODIGO_FILIAL)
+    REFERENCES lojas(CODIGO)
+;
+
+INSERT INTO estoque VALUES (1,1000,2);
+INSERT INTO estoque VALUES (2,1000,2);
+
+SELECT * FROM estoque;
+
+SELECT est.CODIGO_FILIAL
+       ,loj.NOME
+       ,est.CODIGO_PRODUTO
+       ,prod.DESCRICAO
+       ,est.QUANTIDADE
+  FROM estoque est
+  INNER JOIN produtos prod ON est.CODIGO_PRODUTO = prod.CODIGO
+  INNER JOIN lojas loj ON est.CODIGO_FILIAL = loj.CODIGO

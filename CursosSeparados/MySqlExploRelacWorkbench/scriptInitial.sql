@@ -64,7 +64,7 @@ USE <nome_database>;
 
 -- tabela author
 
-CREATE TABLE `dio_mysql`.`author` (
+CREATE TABLE `dio_mysql`.`authors` (
     `id_author` INT NOT NULL AUTO_INCREMENT,
     `name` VARCHAR(45) NOT NULL,
     `born` DATETIME NOT NULL,
@@ -73,56 +73,135 @@ CREATE TABLE `dio_mysql`.`author` (
   
 -- inserir dados:
 
-INSERT INTO author (name, born) VALUES ('Maria', '1975-12-11');
-INSERT INTO author (name, born) VALUES ('João', '1989-09-15');
-INSERT INTO author (name, born) VALUES ('Pedro', '1965-07-05');
+INSERT INTO `dio_mysql`.`authors` (name, born) VALUES ('Maria', '1975-12-11');
+INSERT INTO `dio_mysql`.`authors` (name, born) VALUES ('João', '1989-09-15');
+INSERT INTO `dio_mysql`.`authors` (name, born) VALUES ('Pedro', '1965-07-05');
+
+-- tabela SEO
+CREATE TABLE `dio_mysql`.`seo` (
+  `id_seo` INT NOT NULL AUTO_INCREMENT,
+  `category` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id_seo`));
+  
+-- inserir dados:
+INSERT INTO `dio_mysql`.`seo` (category) VALUES ('Frontend');
+INSERT INTO `dio_mysql`.`seo` (category) VALUES ('Backend');
+
 
 -- tabela videos:
 
 CREATE TABLE `dio_mysql`.`videos` (
   `id_video` INT NOT NULL AUTO_INCREMENT,
-  `fk_id_author` INT NOT NULL,
+  `fk_author` INT NOT NULL,
+  `fk_seo` INT NOT NULL,
   `title` VARCHAR(45) NOT NULL,
   `likes` INT NULL,
-  `dislikes` INT NULL,
+  `dislikes` VARCHAR(45) NULL,
   PRIMARY KEY (`id_video`),
-  INDEX `fk_id_author_idx` (`fk_id_author` ASC) VISIBLE,
-  CONSTRAINT `fk_id_author`
-    FOREIGN KEY (`fk_id_author`)
-    REFERENCES `dio_mysql`.`author` (`id_author`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION
-);
+  INDEX `fk_author_idx` (`fk_author` ASC) VISIBLE,
+  INDEX `fk_seo_idx` (`fk_seo` ASC) VISIBLE,
+  CONSTRAINT `fk_author`
+    FOREIGN KEY (`fk_author`)
+    REFERENCES `dio_mysql`.`authors` (`id_author`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+  CONSTRAINT `fk_seo`
+    FOREIGN KEY (`fk_seo`)
+    REFERENCES `dio_mysql`.`seo` (`id_seo`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE);
 
 -- inserir dados:
 
-INSERT INTO videos (fk_id_author, title, likes, dislikes) VALUES (1, 'MySQL',  10, 2);
-INSERT INTO videos (fk_id_author, title, likes, dislikes) VALUES (2, 'HTML',  30, 1);
-INSERT INTO videos (fk_id_author, title, likes, dislikes) VALUES (1, 'CSS',  18, 3);
-INSERT INTO videos (fk_id_author, title, likes, dislikes) VALUES (3, 'JavaScript',  15, 8);
-INSERT INTO videos (fk_id_author, title, likes, dislikes) VALUES (1, 'Phython',  50, 0);
+INSERT INTO `dio_mysql`.`videos` (fk_author, title, fk_seo, likes, dislikes) VALUES (1, 'MySQL', 2, 10, 2);
+INSERT INTO `dio_mysql`.`videos` (fk_author, title, fk_seo, likes, dislikes) VALUES (2, 'HTML',  1, 30, 1);
+INSERT INTO `dio_mysql`.`videos` (fk_author, title, fk_seo, likes, dislikes) VALUES (1, 'CSS', 1 , 18, 3);
+INSERT INTO `dio_mysql`.`videos` (fk_author, title, fk_seo, likes, dislikes) VALUES (3, 'JavaScript',  1, 15, 8);
+INSERT INTO `dio_mysql`.`videos` (fk_author, title, fk_seo, likes, dislikes) VALUES (1, 'Phython',  2, 50, 0);
 
 -- realizando JOIN com as tabelas author e videos
 SELECT 
-    vi.*, ath.*
+    vi.id_video,
+    vi.title,
+    ath.name author,
+    se.category,
+    vi.likes,
+    vi.dislikes
 FROM
     dio_mysql.videos vi
         JOIN
-    dio_mysql.author ath ON vi.fk_id_author = at.id_author;
+    dio_mysql.authors ath ON vi.fk_author = ath.id_author
+    JOIN
+    dio_mysql.seo se ON vi.fk_seo = se.id_seo
+ORDER BY id_video;
+
+
 
 -- tabela playlist:
 
-CREATE TABLE `dio_mysql`.`playlist` (
+CREATE TABLE `dio_mysql`.`playlists` (
   `id_playlist` INT NOT NULL AUTO_INCREMENT,
-  `videos` VARCHAR(45) NOT NULL,
-  `title` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`id_playlist`));
+  `fk_author` INT NOT NULL,
+  `name_pl` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id_playlist`),
+  INDEX `fk_author_idx` (`fk_author` ASC) VISIBLE,
+  CONSTRAINT `fk_author_pl`
+    FOREIGN KEY (`fk_author`)
+    REFERENCES `dio_mysql`.`authors` (`id_author`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE);
+    
 
--- tabela SEO
-CREATE TABLE `dio_mysql`.`seo` (
-  `id_seo` INT NOT NULL AUTO_INCREMENT,
-  `categorys` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`id_seo`));
-  
+INSERT INTO `dio_mysql`.`playlists` (fk_author, name_pl) VALUES (1,'HTML + CSS');
+INSERT INTO `dio_mysql`.`playlists` (fk_author, name_pl) VALUES (2,'HTML + MySQL + JavaScript');
+INSERT INTO `dio_mysql`.`playlists` (fk_author, name_pl) VALUES (3,'Phython + JavaScript');
+
+CREATE TABLE `dio_mysql`.`videos_playlist` (
+  `id_vp` INT NOT NULL AUTO_INCREMENT,
+  `fk_video` INT NOT NULL,
+  `fk_playlist` INT NOT NULL,
+  PRIMARY KEY (`id_vp`),
+  INDEX `fk_videos_idx` (`fk_video` ASC) VISIBLE,
+  INDEX `fk_playlist_idx` (`fk_playlist` ASC) VISIBLE,
+  CONSTRAINT `fk_video`
+    FOREIGN KEY (`fk_video`)
+    REFERENCES `dio_mysql`.`videos` (`id_video`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_playlist`
+    FOREIGN KEY (`fk_playlist`)
+    REFERENCES `dio_mysql`.`playlists` (`id_playlist`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+INSERT INTO `dio_mysql`.`videos_playlist` (fk_video, fk_playlist) VALUES (2,1);
+INSERT INTO `dio_mysql`.`videos_playlist` (fk_video, fk_playlist) VALUES (3,1);
+INSERT INTO `dio_mysql`.`videos_playlist` (fk_video, fk_playlist) VALUES (2,2);
+INSERT INTO `dio_mysql`.`videos_playlist` (fk_video, fk_playlist) VALUES (1,2);
+INSERT INTO `dio_mysql`.`videos_playlist` (fk_video, fk_playlist) VALUES (4,2);
+INSERT INTO `dio_mysql`.`videos_playlist` (fk_video, fk_playlist) VALUES (5,3);
+INSERT INTO `dio_mysql`.`videos_playlist` (fk_video, fk_playlist) VALUES (3,3);
 
 
+SELECT 
+	vp.id_vp,
+--    vi.id_video,
+    vi.title,
+    ath2.name author,
+--    pl.id_playlist,
+    pl.name_pl,
+    ath.name author_pl,
+    se.category
+FROM
+    dio_mysql.videos_playlist vp
+        JOIN
+    dio_mysql.videos vi ON vp.fk_video = vi.id_video
+    JOIN
+    dio_mysql.playlists pl ON vp.fk_playlist = pl.id_playlist 
+    JOIN
+    dio_mysql.authors ath ON pl.fk_author = ath.id_author
+    JOIN
+	dio_mysql.authors ath2 ON vi.fk_author = ath2.id_author
+    JOIN
+    dio_mysql.seo se ON vi.fk_seo = se.id_seo
+ORDER BY vp.id_vp;
