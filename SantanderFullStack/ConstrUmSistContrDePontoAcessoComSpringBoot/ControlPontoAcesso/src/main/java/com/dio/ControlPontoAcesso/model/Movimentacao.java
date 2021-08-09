@@ -22,7 +22,7 @@ public class Movimentacao {
     @Embeddable
     @Getter
     @Setter
-    public class MovimetacaoId implements Serializable{
+    public static class MovimetacaoId implements Serializable{
         private long idMovimento;
         private long idUsuario;
     }
