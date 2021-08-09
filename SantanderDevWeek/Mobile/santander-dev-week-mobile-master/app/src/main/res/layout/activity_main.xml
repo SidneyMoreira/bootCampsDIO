@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:theme="?attr/actionBarTheme"
+        app:title="@string/app_name"
+        android:src="@drawable/ic_logo"
+        app:titleTextColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_menu_white_24dp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_logo" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/redPrimary"
+        app:layout_constraintDimensionRatio="16:6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <TextView
+        android:id="@+id/tv_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/app_msg_welcome"
+        android:textColor="@android:color/white"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <TextView
+        android:id="@+id/tv_agency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/app_msg_agency"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/tv_user"
+        app:layout_constraintTop_toBottomOf="@id/tv_user"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_current_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_msg_current_account"
+        android:textStyle="bold"
+        android:layout_marginLeft="16dp"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toEndOf="@id/tv_agency"
+        app:layout_constraintTop_toTopOf="@id/tv_agency" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mcv_account"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_agency" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:src="@drawable/ic_update_black_24dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_balance_available"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="@string/app_msg_balance_available"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_balance"
+                app:layout_constraintLeft_toRightOf="@id/iv_balance"
+                app:layout_constraintTop_toTopOf="@id/iv_balance" />
+
+            <ImageView
+                android:id="@+id/iv_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/ic_expand_less_black_24dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="24dp"
+                android:text="R$ 1.324,64"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/iv_balance"
+                app:layout_constraintTop_toBottomOf="@id/tv_balance_available" />
+
+            <TextView
+                android:id="@+id/tv_limit_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/app_msg_limit_balance"
+                app:layout_constraintStart_toStartOf="@id/tv_balance"
+                app:layout_constraintTop_toBottomOf="@id/tv_balance" />
+
+            <TextView
+                android:id="@+id/tv_sum_limit_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="R$ 2.324,64"
+                app:layout_constraintStart_toEndOf="@id/tv_limit_balance"
+                app:layout_constraintTop_toTopOf="@id/tv_limit_balance" />
+
+            <View
+                android:id="@+id/v_divided"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="16dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintTop_toBottomOf="@id/tv_sum_limit_balance"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <TextView
+                android:id="@+id/tv_see_extract"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_msg_see_extract"
+                android:textColor="@color/redSecundary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_divided" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mvc_pay"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mcv_account" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/iv_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_credit_card_black_24dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_msg_pay"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/iv_pay"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mvc_transfer"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/mcv_account"
+        app:layout_constraintStart_toEndOf="@id/mvc_pay">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/iv_transfer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_payments_black_24dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_transfer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_msg_transfer"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/iv_transfer"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mvc_recharging"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/mcv_account"
+        app:layout_constraintStart_toEndOf="@id/mvc_transfer">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/iv_recharging"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_stay_primary_portrait_black_24dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_recharging"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_msg_recharging"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/iv_recharging"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <ImageView
+        android:id="@+id/iv_final_card_content"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/mvc_pay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/redPrimary" />
+
+    <TextView
+        android:id="@+id/tv_final_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_msg_final_card"
+        android:textColor="@color/white"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintStart_toStartOf="@id/iv_final_card_content"
+        app:layout_constraintTop_toTopOf="@id/iv_final_card_content"
+        app:layout_constraintBottom_toBottomOf="@id/iv_final_card_content" />
+
+    <TextView
+        android:id="@+id/tv_value_final_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0033"
+        android:textColor="@color/white"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/tv_final_card"
+        app:layout_constraintTop_toTopOf="@id/tv_final_card"
+        app:layout_constraintBottom_toBottomOf="@id/tv_final_card" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/ic_expand_more_white_24dp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_final_card_content"
+        app:layout_constraintTop_toTopOf="@id/iv_final_card_content"
+        app:layout_constraintEnd_toEndOf="@id/iv_final_card_content" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,47 +1,54 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using curso.web.mvc.Models.Curso;
+using curso.web.mvc.Services;
 using Microsoft.AspNetCore.Mvc;
+using Refit;
 
 namespace curso.web.mvc.Controllers
 {
+    [Microsoft.AspNetCore.Authorization.Authorize]
     public class CursoController : Controller
     {
+        private readonly ICursoService _cursoService;
+
+        public CursoController(ICursoService cursoService)
+        {
+            _cursoService = cursoService;
+        }
+
+        
         // GET: /<controller>/
         public IActionResult Cadastrar()
         {
             return View();
         }
 
+
         [HttpPost]
-        public IActionResult Cadastrar(CadastrarCursoViewModelInput cadastrarCursoViewModelInput)
+        public async Task<IActionResult> Cadastrar(CadastrarCursoViewModelInput cadastrarCursoViewModelInput)
         {
+            try
+            {
+                var curso = await _cursoService.Registrar(cadastrarCursoViewModelInput);
+                ModelState.AddModelError("", $"Os curso {curso.Nome} foi cadastrado com sucesso");
+            }
+            catch (ApiException ex)
+            {
+                ModelState.AddModelError("", ex.Message);
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", ex.Message);
+            }
             return View();
         }
 
         //GET: /<controller>/
-        public IActionResult Listar()
+        public async Task<IActionResult> Listar()
         {
-            var cursos = new List<ListarCursoViewModelOutput>
-            {
-                new ListarCursoViewModelOutput()
-                {
-                    Nome = "Curso A",
-                    Descricao = "Cursoa nada a ver",
-                    Login = "SidMoreira@gamil.com"
-                },
-                new ListarCursoViewModelOutput()
-                {
-                    Nome = "Curso B",
-                    Descricao = "Cursoa nada a ver2",
-                    Login = "SidMoreira@gamil.com"
-                },
-                new ListarCursoViewModelOutput()
-                {
-                    Nome = "Curso C",
-                    Descricao = "Cursoa nada a ver3",
-                    Login = "SidMoreira@gamil.com"
-                }
-            };
+            var cursos = await _cursoService.Obter();
             return View(cursos);
         }
 

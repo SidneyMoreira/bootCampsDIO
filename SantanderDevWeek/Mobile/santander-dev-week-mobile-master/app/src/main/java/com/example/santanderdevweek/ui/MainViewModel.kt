@@ -1,0 +1,17 @@
+package com.example.santanderdevweek.ui
+
+import com.example.santanderdevweek.data.Account
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import com.example.santanderdevweek.data.local.FakeData
+
+class MainViewModel : ViewModel() {
+    private val mutableLiveData: MutableLiveData<Account> = MutableLiveData()
+
+    fun searchAccountClient() : LiveData<Account> {
+        mutableLiveData.value = FakeData().getLocalData()
+
+        return mutableLiveData
+    }
+}

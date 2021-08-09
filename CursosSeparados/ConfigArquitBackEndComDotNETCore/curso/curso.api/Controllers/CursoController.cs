@@ -38,17 +38,28 @@ namespace curso.api.Controllers
         [Route("")]
         public async Task<IActionResult> Post(CursoViewModelInput cursoViewModelInput)
         {
+            
+
+            Curso curso = new Curso
+            {
+                Nome = cursoViewModelInput.Nome,
+                Descricao = cursoViewModelInput.Descricao,
+                
+            };
+
             var codigoUsuario = int.Parse(User.FindFirst(c => c.Type == ClaimTypes.NameIdentifier)?.Value);
-
-            Curso curso = new Curso();
-            curso.Nome = cursoViewModelInput.Nome;
-            curso.Descricao = cursoViewModelInput.Descricao;
             curso.CodigoUsuario = codigoUsuario;
-
             _cursoRepository.Adicionar(curso);
             _cursoRepository.Commit();
-            
-            return Created("", cursoViewModelInput);
+
+            var cursoViewModelOutput = new CursoViewModelOutput
+            {
+                Nome = curso.Nome,
+                Descricao = curso.Descricao
+            };
+
+
+            return Created("", cursoViewModelOutput);
         }
 
         /// <summary>

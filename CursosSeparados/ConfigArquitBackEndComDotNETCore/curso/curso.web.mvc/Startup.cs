@@ -1,13 +1,18 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
+using curso.web.mvc.Handlers;
+using curso.web.mvc.Services;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Refit;
 
 namespace curso.web.mvc
 {
@@ -24,6 +29,35 @@ namespace curso.web.mvc
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddHttpContextAccessor();
+
+            var clientHandler = new HttpClientHandler
+            {
+                ServerCertificateCustomValidationCallback = (sender, cert, chain, SslPolicyErrors) => { return true; }
+            };
+
+            services.AddRefitClient<IUsuarioService>()
+                .ConfigureHttpClient(c =>
+                {
+                    c.BaseAddress = new Uri(Configuration.GetValue<String>("UrlApiCurso"));
+                }).ConfigurePrimaryHttpMessageHandler(c => clientHandler);
+
+            services.AddTransient<BearerTokenMessageHandler>();
+
+            services.AddRefitClient<ICursoService>()
+                .AddHttpMessageHandler<BearerTokenMessageHandler>()
+                .ConfigureHttpClient(c =>
+                {
+                    c.BaseAddress = new Uri(Configuration.GetValue<String>("UrlApiCurso"));
+                }).ConfigurePrimaryHttpMessageHandler(c => clientHandler);
+
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(options =>
+                {
+                    options.LoginPath = "/Usuario/Logar";
+                    options.AccessDeniedPath = "/Usuario/Logar";
+                });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,6 +78,7 @@ namespace curso.web.mvc
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

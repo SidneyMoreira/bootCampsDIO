@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "curso.api", "curso.api\curs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "curso.web.mvc", "curso.web.mvc\curso.web.mvc.csproj", "{983C83A9-6DE6-4B8E-B9D6-21DF884A416D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E51299AE-C2E6-4205-9675-AE26C7BB9A62}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F927D022-A493-45E5-9E00-FF5D7EE4AB6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "curso.api.tests", "tests\curso.api.tests\curso.api.tests.csproj", "{FFDA791B-81F2-4A6C-BD5C-CA9BB5F1B1D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,11 +27,20 @@ Global
 		{983C83A9-6DE6-4B8E-B9D6-21DF884A416D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{983C83A9-6DE6-4B8E-B9D6-21DF884A416D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{983C83A9-6DE6-4B8E-B9D6-21DF884A416D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFDA791B-81F2-4A6C-BD5C-CA9BB5F1B1D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFDA791B-81F2-4A6C-BD5C-CA9BB5F1B1D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFDA791B-81F2-4A6C-BD5C-CA9BB5F1B1D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFDA791B-81F2-4A6C-BD5C-CA9BB5F1B1D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F3D19498-25C0-42F1-9B30-E03FA8C8E7A0}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{63091B6E-4635-411E-9C5B-CB3C9535576D} = {E51299AE-C2E6-4205-9675-AE26C7BB9A62}
+		{983C83A9-6DE6-4B8E-B9D6-21DF884A416D} = {E51299AE-C2E6-4205-9675-AE26C7BB9A62}
+		{FFDA791B-81F2-4A6C-BD5C-CA9BB5F1B1D3} = {F927D022-A493-45E5-9E00-FF5D7EE4AB6F}
 	EndGlobalSection
 EndGlobal

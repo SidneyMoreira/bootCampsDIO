@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SantanderDevWeek</string>
+    <string name="app_msg_welcome">Hello, Leandro</string>
+    <string name="app_msg_balance_available">Balance available</string>
+    <string name="app_msg_limit_balance">Balance + Limit</string>
+    <string name="app_msg_see_extract">View Extractor</string>
+    <string name="app_msg_pay">Pay</string>
+    <string name="app_msg_transfer">Transfer</string>
+    <string name="app_msg_recharging">Recharding</string>
+    <string name="app_msg_final_card">Final Card</string>
+    <string name="app_msg_current_account">Cc 01107954-5</string>
+    <string name="app_msg_agency">Ag 2031</string>
+</resources>

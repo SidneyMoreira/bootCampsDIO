@@ -1,4 +1,5 @@
-﻿using curso.api.Business.Entities;
+﻿using System.Threading.Tasks;
+using curso.api.Business.Entities;
 using curso.api.Business.Repositories;
 using curso.api.Configurations;
 using curso.api.Filters;
@@ -36,9 +37,9 @@ namespace curso.api.Controllers
         [HttpPost]
         [Route("logar")]
         [ValidacaoModelStateCustomizado]
-        public IActionResult Logar(LoginViewModelInput loginViewModelInput)
+        public async Task<IActionResult> Logar(LoginViewModelInput loginViewModelInput)
         {
-            var usuario = _usuarioRepository.ObterUsuario(loginViewModelInput.Login);
+            var usuario = await _usuarioRepository.ObterUsuarioAsync(loginViewModelInput.Login);
 
             if (usuario == null)
             {
@@ -80,11 +81,16 @@ namespace curso.api.Controllers
         [HttpPost]
         [Route("registrar")]
         [ValidacaoModelStateCustomizado]
-        public IActionResult Registrar(RegistroViewModelInput registroViewModelInput)
+        public async Task<IActionResult> Registrar(RegistroViewModelInput registroViewModelInput)
         {
-            
 
-            var usuario = new Usuario();
+            var usuario = await _usuarioRepository.ObterUsuarioAsync(registroViewModelInput.Login);
+            if(usuario != null)
+            {
+                return BadRequest("Usuário já cadastrado");
+            }
+
+            usuario = new Usuario();
 
             usuario.Login = registroViewModelInput.Login;
             usuario.Email = registroViewModelInput.Email;
