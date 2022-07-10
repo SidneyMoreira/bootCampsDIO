@@ -15,3 +15,7 @@ Repositorio dos BootCamps feito na DIO:
 
 7. #### [Santander Bootcamp | Fullstack Developer](https://github.com/SidneyMoreira/bootCampsDIO/tree/main/SantanderFullStack)
 
+8. [Cogzitan Cloud Data Engineer](https://github.com/SidneyMoreira/bootCampsDIO/tree/main/CognizantCloudDataEnginner)
+
+9. [Formação Quality Assurance (QA) Experience](https://github.com/SidneyMoreira/bootCampsDIO/tree/main/QAExperience/
+
