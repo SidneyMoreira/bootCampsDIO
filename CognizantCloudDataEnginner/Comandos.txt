@@ -1,0 +1,37 @@
+https://imasters.com.br/devsecops/devops-hdfs-hadoop-distributed-file-system-primeiros-passos
+
+sudo -u hdfs hdfs dfsadmin -safemode leave
+
+sudo service hadoop-hdfs-namenode start
+sudo service hadoop-hdfs-secondarynamenode start
+sudo service hadoop-hdfs-datanode start
+sudo service hadoop-yarn-nodemanager start
+sudo service hadoop-yarn-resourcemanager start
+sudo service hadoop-mapreduce-historyserver start
+sudo service zookeeper-server start
+
+sudo service hbase-master start
+sudo service hbase-regionserver start
+sudo service hive-metastore start
+sudo service hive-server2 start
+sudo service impala-server start
+sudo service impala-state-store start
+sudo service impala-catalog start
+
+sh install_sqoop.sh
+
+mysql -u root -h localhost -pEveris@2021 < pokemon.sql
+
+sh sqoop_import.sh
+
+hdfs dfs -text /user/everis-bigdata/pokemon/*.gz |more
+
+hdfs dfs- cat /user/everis-bigdata/pokemon/1/*
+
+
+Kill a hadoop job:
+
+yarn application -kill $ApplicationId
+You can get a list of all ApplicationId's doing:
+
+yarn application -list
