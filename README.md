@@ -17,5 +17,5 @@ Repositorio dos BootCamps feito na DIO:
 
 8. [Cogzitan Cloud Data Engineer](https://github.com/SidneyMoreira/bootCampsDIO/tree/main/CognizantCloudDataEnginner)
 
-9. [Formação Quality Assurance (QA) Experience](https://github.com/SidneyMoreira/bootCampsDIO/tree/main/QAExperience/
+9. [Formação Quality Assurance (QA) Experience](https://github.com/SidneyMoreira/bootCampsDIO/tree/main/QAExperience/)
 

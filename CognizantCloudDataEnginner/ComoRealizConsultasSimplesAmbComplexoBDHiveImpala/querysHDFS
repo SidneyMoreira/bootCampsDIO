@@ -1,0 +1,44 @@
+baixar pacotes sqoop e kite
+http://ro-bucharest-repo.bigstepcloud.com/cloudera-repos/cdh5/redhat/7/x86_64/cdh/5.16.2/RPMS/noarch/
+
+sudo -u hdfs hadoop dfsadmin -safemode leave
+
+hdfs dfs -put arquivo caminho hdfs (enviar para o hdfs)
+hdfs dfs -copyToLocal caminho hdfs (copiar do hdfs)
+
+visualizar arquivos parquet: parquet-tools schema arquivo
+
+yarn application -kill application_1661221149393_0001
+
+
+CREATE EXTERNAL TABLE TB_EXT_EMPLOYEE(
+id STRING,
+groups STRING,
+age STRING,
+active_lifestyle STRING,
+salary STRING)
+ROW FORMAT DELIMITED FIELDS
+TERMINATED BY '\;'
+STORED AS TEXTFILE
+LOCATION '/user/hive/warehouse/external/tabelas/employee'
+tblproperties ("skip.header.line.count"="1");
+
+select count(*) from TB_EXT_EMPLOYEE;
+
+
+CREATE TABLE TB_EMPLOYEE(
+id INT,
+groups STRING,
+age INT,
+active_lifestyle STRING,
+salary DOUBLE)
+PARTITIONED BY (dt_processamento STRING)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY '|'
+STORED AS PARQUET TBLPROPERTIES ("parquet.compression"="SNAPPY");
+
+
+
+insert into table TB_EMPLOYEE partition (dt_processamento='20220822')
+select id, groups, 
+age, active_lifestyle, salary 
+from TB_EXT_EMPLOYEE;
