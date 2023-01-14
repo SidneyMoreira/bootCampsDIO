@@ -18,7 +18,7 @@
 
 ### Resutados
 
-![Relatorio](/Volumes/Seagate/Projects/bootCampsDIO/FormacaoCyberSecurity/0-Desafios/01-Phishing/Relatorio.png)
+![Relatorio](https://github.com/SidneyMoreira/bootCampsDIO/blob/main/FormacaoCyberSecurity/0-Desafios/1-Phishing/Relatorio.png)
 
 Arquivo XML:
 
