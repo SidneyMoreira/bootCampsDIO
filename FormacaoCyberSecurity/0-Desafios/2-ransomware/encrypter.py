@@ -33,4 +33,4 @@ else:
 ### help
 if file_name == "-h" or file_name == '--help':
     print("Sintaxe 'python encrypter.py [arquivo_a_ser_criptografado] [chave] [novo_nome]'")
-    sys.exit()
+    sys.exit() 

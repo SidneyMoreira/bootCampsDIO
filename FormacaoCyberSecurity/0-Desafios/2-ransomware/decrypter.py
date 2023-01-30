@@ -29,7 +29,7 @@ else:
     print("Sintaxe 'python decrypter.py [arquivo_criptografado] [chave] [novo_nome]'")
     sys.exit()
 
-
+ 
 ### help
 if file_name == "-h" or file_name == '--help':
     print("Sintaxe 'python decrypter.py [arquivo_criptografado] [chave] [novo_nome]'")

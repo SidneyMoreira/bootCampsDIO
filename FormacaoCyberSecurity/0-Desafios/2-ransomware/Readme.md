@@ -11,11 +11,11 @@ Foi feita uma pequena mudança no código do professor para permitir passagem de
 
 **Para criptografar:** 
 
-python encrypter.py [arquivo_a_ser_criptografado] [chave] [novo_nome]
+   python encrypter.py [arquivo_a_ser_criptografado] [chave] [novo_nome]
 
 **Para Descriptografar:**
 
-python decrypter.py [arquivo_criptografado] [chave] [novo_nome]
+   python decrypter.py [arquivo_criptografado] [chave] [novo_nome]
 
 Também é possivel consultar a sintaxe pelo comando:
 
