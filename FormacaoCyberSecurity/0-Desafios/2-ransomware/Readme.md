@@ -33,7 +33,7 @@ python encrypter.py --help
 
 Os testes foram realizados em ambiente virtual seguro, cuidado ao utilizar para fins que não sejam para estudos. Invadir ou acessar documentos sem permissão é crime.
 
-**[LEI Nº 12.737, DE 30 DE NOVEMBRO DE 2012.](http://legislacao.planalto.gov.br/legisla/legislacao.nsf/Viw_Identificacao/lei 12.737-2012?OpenDocument)**
+**[LEI Nº 12.737, DE 30 DE NOVEMBRO DE 2012.](http://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2012/Lei/L12737.htm)**
 
 Dispõe sobre a tipificação criminal de delitos informáticos; altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 - Código Penal; e dá outras providências.
 
