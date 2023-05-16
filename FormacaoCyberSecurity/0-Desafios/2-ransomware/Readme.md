@@ -7,7 +7,7 @@
 
 ### Executanto o Ransomware no Kali Linux
 
-Foi feita uma pequena mudança no código do professor para permitir passagem de parâmetros no shell, a sintaxa padrão é:
+Foi feita uma pequena mudança no código do professor para permitir passagem de parâmetros no shell, a sintaxe padrão é:
 
 **Para criptografar:** 
 
