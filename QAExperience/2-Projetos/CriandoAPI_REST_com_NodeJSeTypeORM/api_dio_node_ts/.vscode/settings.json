@@ -1,0 +1,8 @@
+{
+    "launch": {
+        "configurations": [],
+        "compounds": []
+    },
+    "jest.autoRevealOutput": "on-run",
+    "jest.autoRun": "off"
+}
