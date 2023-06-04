@@ -16,5 +16,46 @@
     "@typescript-eslint"
   ],
   "rules": {
+    "prettier/prettier": "error",
+    "global-require": "off",
+    "no-new": "off",
+    "no-console": "off",
+    "import/prefer-default-export": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "ts": "never"
+      }
+    ],
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always", // new line between groups
+        "groups": [
+          "module",
+          "/^@apps/"
+          "/^@__mocks__/",
+          "/^@controllers/",
+          "/^@config/",
+          "/^@database/",
+          "/^@entities/",
+          "/^@repositories/",
+          "/^@services/",
+          "/^@tests/",
+          "/^@/",
+          [
+            "parent",
+            "sibling",
+            "index"
+          ]
+        ],
+        "alphabetize": {
+          "order": "asc",
+          "ignoreCase": true
+        }
+      }
+    ]
   }
 }

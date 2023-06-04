@@ -28,7 +28,32 @@
     // "rootDir": "./src",                                  /* Specify the root folder within your source files. */
     "moduleResolution": "node",                       /* Specify how TypeScript looks up a file from a given module specifier. */
     // "baseUrl": "./",                                  /* Specify the base directory to resolve non-relative module names. */
-    // "paths": {},                                      /* Specify a set of entries that re-map imports to additional lookup locations. */
+    "paths": {
+      "@__mocks__/*": [
+        "./src/__mocks__/*"
+      ],
+      "@config/*": [
+        "./src/config/*"
+      ],
+      "@controllers/*": [
+        "./src/controllers/*"
+      ],
+      "@database/*": [
+        "./src/database/*"
+      ],
+      "@entities/*": [
+        "./src/entities/*"
+      ],
+      "@repositories/*": [
+        "./src/repositories/*"
+      ],
+      "@services/*": [
+        "./src/services/*"
+      ],
+      "@tests/*": [
+        "./src/tests/*"
+      ]
+    },                                      /* Specify a set of entries that re-map imports to additional lookup locations. */
     // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
     "typeRoots": [
       "./src/utils/@types",
@@ -102,9 +127,10 @@
   },
   "include": [
     "src"
-  ],
+, "ormconfig.js"  ],
   "exclude": [
     "./**/__mocks__/*",
-    "./**/*.test.ts"
+    "./**/*.test.ts",
+    
   ]
 }
