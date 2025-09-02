@@ -1,0 +1,12 @@
+package com.phoenix.bank.model;
+
+import java.util.UUID;
+import java.time.OffsetDateTime;
+
+public record MoneyAudit(
+    UUID transactionId,
+    BankService targetService,
+    String description,
+    OffsetDateTime createdAt){
+
+}
