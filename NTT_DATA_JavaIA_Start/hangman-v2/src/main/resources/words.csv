@@ -1,0 +1,66 @@
+# word;hint;category;level;maxAttempts;hintsEnabled
+java;Linguagem amplamente usada para backend;Tecnologia;EASY;8;true
+programacao;Arte de resolver problemas com código;Tecnologia;MEDIUM;6;true
+computador;Máquina eletrônica programável;Tecnologia;MEDIUM;6;true
+teclado;Periférico de entrada para digitar;Periféricos;EASY;8;true
+internet;Rede mundial de computadores;Tecnologia;MEDIUM;6;true
+variavel;Espaço nomeado para armazenar dados;Lógica de Programação;EASY;8;true
+compilador;Traduz código-fonte para executável;Tecnologia;HARD;5;false
+framework;Conjunto de bibliotecas e padrões;Tecnologia;MEDIUM;6;true
+algoritmo;Sequência de passos para resolver problema;Lógica de Programação;MEDIUM;6;true
+engenharia;Disciplina que aplica conhecimentos científicos;Carreira;HARD;5;false
+interface;Ponto de contato entre dois sistemas ou componentes;Tecnologia;MEDIUM;6;true
+biblioteca;Coleção de funcionalidades reutilizáveis;Tecnologia;EASY;8;true
+processador;Unidade central de processamento;Hardware;MEDIUM;6;true
+memoria;Componente responsável por armazenar dados temporariamente;Hardware;MEDIUM;6;true
+smartphone;Dispositivo móvel multifuncional;Tecnologia;EASY;8;true
+nuvem;Serviços e recursos computacionais via internet;Tecnologia;MEDIUM;6;true
+seguranca;Práticas para proteger dados e sistemas;Tecnologia;HARD;5;false
+criptografia;Técnica para codificar informações;Segurança;HARD;5;false
+refatoracao;Reorganização de código para melhorar sua estrutura;Boas Práticas;MEDIUM;6;true
+depuracao;Processo de identificar e corrigir erros em software;Boas Práticas;MEDIUM;6;true
+arquitetura;Estrutura de componentes de um sistema;Boas Práticas;HARD;5;false
+microservicos;Abordagem de dividir aplicações em serviços independentes;Arquitetura;HARD;5;false
+documentacao;Registros que descrevem software ou processos;Boas Práticas;EASY;8;true
+iteracao;Repetição de um conjunto de instruções;Lógica de Programação;EASY;8;true
+desenvolvedor;Profissional que cria software;Carreira;EASY;8;true
+backlog;Lista priorizada de tarefas ou requisitos;Gestão Ágil;MEDIUM;6;true
+sprint;Período fixo para entregar incrementos de produto;Gestão Ágil;MEDIUM;6;true
+kanban;Método visual de gestão de fluxo de trabalho;Gestão Ágil;EASY;8;true
+scrum;Framework ágil para gerenciamento de projetos;Gestão Ágil;MEDIUM;6;true
+produtividade;Capacidade de produzir resultados com eficiência;Carreira;MEDIUM;6;true
+corrotina;Mecanismo de concorrência cooperativa;Tecnologia;HARD;5;false
+concorrencia;Execução simultânea de tarefas;Tecnologia;HARD;5;false
+thread;Fluxo de execução dentro de um processo;Tecnologia;MEDIUM;6;true
+pipeline;Sequência de etapas de processamento de dados;Tecnologia;MEDIUM;6;true
+container;Pacote padronizado com aplicação e dependências;DevOps;MEDIUM;6;true
+virtualizacao;Criação de versões virtuais de recursos físicos;Tecnologia;MEDIUM;6;true
+monitoramento;Observação contínua de métricas e eventos;DevOps;MEDIUM;6;true
+observabilidade;Capacidade de entender o estado interno de um sistema;DevOps;HARD;5;false
+testeunitario;Verificação de comportamentos isolados de código;Boas Práticas;EASY;8;true
+integracao;Combinação de componentes ou sistemas diferentes;Boas Práticas;MEDIUM;6;true
+deploy;Publicação de software em produção;DevOps;MEDIUM;6;true
+rollback;Retorno para versão anterior de um sistema;DevOps;MEDIUM;6;true
+prototype;Modelo inicial para validar ideias;Design;EASY;8;true
+uxdesign;Experiência do usuário na interação com produtos;Design;MEDIUM;6;true
+usabilidade;Facilidade de uso de um sistema;Design;MEDIUM;6;true
+acessibilidade;Garantia de uso por pessoas com diferentes habilidades;Design;HARD;5;false
+apicamada;Interface de programação que expõe serviços;Arquitetura;MEDIUM;6;true
+escalabilidade;Capacidade do sistema de crescer com demanda;Arquitetura;HARD;5;false
+resiliencia;Habilidade do sistema de se recuperar de falhas;Arquitetura;HARD;5;false
+latencia;Tempo entre solicitação e resposta;Arquitetura;MEDIUM;6;true
+compressao;Redução do tamanho de dados;Tecnologia;MEDIUM;6;true
+serializacao;Transformação de objetos em formato transmissível;Tecnologia;HARD;5;false
+cache;Armazenamento temporário para acessos rápidos;Tecnologia;EASY;8;true
+heuristica;Regra prática para encontrar soluções;Ciência;MEDIUM;6;true
+metadado;Dados que descrevem outros dados;Ciência;EASY;8;true
+analitico;Uso de dados para tomar decisões;Ciência;MEDIUM;6;true
+estatistica;Estudo de coleta e interpretação de dados;Ciência;MEDIUM;6;true
+probabilidade;Medida da chance de um evento ocorrer;Ciência;MEDIUM;6;true
+otimizacao;Processo de melhorar desempenho ou recursos;Gestão;HARD;5;false
+qualidade;Grau de conformidade com requisitos;Gestão;MEDIUM;6;true
+lideranca;Capacidade de guiar equipes;Carreira;MEDIUM;6;true
+mentoria;Acompanhamento para desenvolvimento profissional;Carreira;EASY;8;true
+comunicacao;Troca de informações entre pessoas;Carreira;EASY;8;true
+negociacao;Processo de chegar a um acordo;Carreira;MEDIUM;6;true
+feedback;Retorno sobre desempenho ou comportamento;Carreira;EASY;8;true

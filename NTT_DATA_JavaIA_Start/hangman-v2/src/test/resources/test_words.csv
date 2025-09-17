@@ -1,0 +1,4 @@
+# word;hint;category;level;maxAttempts;hintsEnabled
+facil;Palavra fácil;Teste;EASY;7;true
+medio;Palavra média;Teste;MEDIUM;6;true
+dificil;Palavra difícil;Teste;HARD;5;false
