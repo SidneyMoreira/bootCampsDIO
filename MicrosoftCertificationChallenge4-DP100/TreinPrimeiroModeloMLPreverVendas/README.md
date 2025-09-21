@@ -15,7 +15,7 @@ Você é dono da sorveteria Gelato Mágico, em uma cidade litorânea. As vendas 
 
 
 ## 3) Dados
-- Arquivo: `inputs/Tabela_de_Vendas_de_Sorvete.csv`
+- Arquivo: `./inputs/Tabela_de_Vendas_de_Sorvete.csv`
 - Colunas exemplo: `Data`, `Qtd. Vendas` (alvo), `Temperatura (°C)` (feature principal).
 - Tarefa: Regressão (prever `Qtd. Vendas`).
 
@@ -35,11 +35,11 @@ Você é dono da sorveteria Gelato Mágico, em uma cidade litorânea. As vendas 
 ## 6) Ambiente no Azure ML
 - Resource Group criado para os recursos do projeto:
   
-  ![RG](/img/RG-Projects.png)
+  ![RG](./img/RG-Projects.png)
 
 - Cluster de computação (ex.: `STANDARD_DS11_V2`) para executar os jobs:
   
-  ![Cluster](/img/Cluster.png)
+  ![Cluster](./img/Cluster.png)
 
 
 ## 7) Treinamento no Designer (Low-Code)
@@ -51,11 +51,11 @@ Você é dono da sorveteria Gelato Mágico, em uma cidade litorânea. As vendas 
 
 Tela do Designer:
 
-![Designer](/img/TelaDesigner.png)
+![Designer](./img/TelaDesigner.png)
 
 Scores obtidos após a execução:
 
-![Scores](/img/ScoreDesigner.png)
+![Scores](./img/ScoreDesigner.png)
 
 
 ## 8) Treinamento com AutoML (Code/No-Code)
@@ -66,11 +66,11 @@ Scores obtidos após a execução:
 
 Resultado (exemplo): AutoML escolheu PCA + XGBoostRegressor como melhor modelo.
 
-![Melhor Algoritmo](/img/MelhorAlgoritmo.png)
+![Melhor Algoritmo](./img/MelhorAlgoritmo.png)
 
 Métricas consolidadas:
 
-![Métricas](/img/Metricas.png)
+![Métricas](./img/Metricas.png)
 
 
 ## 9) Rastreamento com MLflow
