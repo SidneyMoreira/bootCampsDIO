@@ -1,0 +1,99 @@
+{
+  "modelVersion": "2023-10-01",
+  "image": {
+    "width": 1024,
+    "height": 710
+  },
+  "count": 3,
+  "objects": [
+    {
+      "bbox": {
+        "x": 151,
+        "y": 77,
+        "w": 279,
+        "h": 373
+      },
+      "top_tag": {
+        "name": "person",
+        "confidence": 0.793
+      }
+    },
+    {
+      "bbox": {
+        "x": 582,
+        "y": 42,
+        "w": 262,
+        "h": 486
+      },
+      "top_tag": {
+        "name": "person",
+        "confidence": 0.912
+      }
+    },
+    {
+      "bbox": {
+        "x": 837,
+        "y": 256,
+        "w": 151,
+        "h": 300
+      },
+      "top_tag": {
+        "name": "person",
+        "confidence": 0.783
+      }
+    }
+  ],
+  "raw": {
+    "modelVersion": "2023-10-01",
+    "metadata": {
+      "width": 1024,
+      "height": 710
+    },
+    "objectsResult": {
+      "values": [
+        {
+          "boundingBox": {
+            "x": 151,
+            "y": 77,
+            "w": 279,
+            "h": 373
+          },
+          "tags": [
+            {
+              "name": "person",
+              "confidence": 0.793
+            }
+          ]
+        },
+        {
+          "boundingBox": {
+            "x": 582,
+            "y": 42,
+            "w": 262,
+            "h": 486
+          },
+          "tags": [
+            {
+              "name": "person",
+              "confidence": 0.912
+            }
+          ]
+        },
+        {
+          "boundingBox": {
+            "x": 837,
+            "y": 256,
+            "w": 151,
+            "h": 300
+          },
+          "tags": [
+            {
+              "name": "person",
+              "confidence": 0.783
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
