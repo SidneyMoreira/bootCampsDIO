@@ -1,5 +1,5 @@
 
-# Xbox Game Pass — Base_XBox.xlsx
+# Desafio Criando um Dashboard de Vendas do Xbox Game Pass
 
 > **Resumo**: Este repositório/documentação faz parte do Desafio proposto no Bootcamp Santander Execel IA e descreve a base de assinaturas do Xbox Game Pass e os cálculos/dashboards construídos diretamente no arquivo **Base_XBox.xlsx**. Ele serve como material de estudo e demonstração de análise com Tabelas Dinâmicas e segmentações de dados no Excel.
 
