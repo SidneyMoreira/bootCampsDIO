@@ -1,9 +1,8 @@
-
-```markdown
 # 💸 App de Finanças Pessoais Finny com Vibe Coding
 
 Este projeto foi desenvolvido como Desafio de Projetos de Vibe Coding na DIO em parceria com a LUPO utilizando Lovable e o Copilot WEB. A proposta é criar um Aplicativo de organização financeira pessoal baseado em interações em linguagem natural.
 
+```markdown
 ## PRD Refinado no Copilot
 
 ```txt
