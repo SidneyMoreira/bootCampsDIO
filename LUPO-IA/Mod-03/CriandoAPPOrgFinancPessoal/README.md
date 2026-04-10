@@ -115,4 +115,3 @@ Entregável da IA
 ### O que aprendeu sobre conversar com IAs?
 - Quanto mais refinamos o prompt, melhores são os resultados.
 - Prompts bem estruturados trazem respostas mais satisfatórias logo no início.
-```
