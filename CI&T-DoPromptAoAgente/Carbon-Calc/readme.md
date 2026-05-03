@@ -26,7 +26,7 @@ Projeto desenvolvido durante o bootcamp da [Digital Innovation One (DIO)](https:
 ## 🚀 Como Usar
 
 ### Acesso Online
-Acesse a calculadora diretamente através do GitHub Pages: [Link do Deploy](#) (atualize após o primeiro deploy)
+Acesse a calculadora diretamente através do GitHub Pages: [Link do Deploy](https://sidneymoreira.github.io/CalculatorCO2/)
 
 ### Uso Local
 1. **Clone o repositório:**
