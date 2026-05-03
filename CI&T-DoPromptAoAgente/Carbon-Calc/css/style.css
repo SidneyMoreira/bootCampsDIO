@@ -1,0 +1,712 @@
+/* ========================================
+   CSS Custom Properties - Eco Palette
+   ======================================== */
+:root {
+    /* Colors */
+    --primary: #10b981;
+    --secondary: #059669;
+    --accent: #34d399;
+    --danger: #ef4444;
+    --warning: #f59e0b;
+    --bg: #f3f4f6;
+    --white: #ffffff;
+    --text-dark: #1f2937;
+    --text-gray: #6b7280;
+    --border-color: #d1d5db;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+
+    /* Border Radius */
+    --radius: 0.5rem;
+    --radius-lg: 1rem;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================================
+   Base Styles
+   ======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+}
+
+/* ========================================
+   Utility Classes
+   ======================================== */
+.hidden {
+    display: none !important;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-sm);
+}
+
+/* ========================================
+   Header
+   ======================================== */
+.header {
+    background: var(--white);
+    box-shadow: var(--shadow-sm);
+    padding: var(--spacing-lg) var(--spacing-sm);
+    text-align: center;
+}
+
+.header__title {
+    color: var(--primary);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-xs);
+}
+
+.header__subtitle {
+    color: var(--text-gray);
+    font-size: 1rem;
+}
+
+/* ========================================
+   Form Styling
+   ======================================== */
+.calculator-form {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: var(--spacing-lg);
+    margin: var(--spacing-lg) auto;
+    max-width: 800px;
+}
+
+.calculator-form__field {
+    margin-bottom: var(--spacing-md);
+}
+
+.calculator-form__label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: var(--spacing-xs);
+    color: var(--text-dark);
+}
+
+.calculator-form__input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.calculator-form__input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+}
+
+.calculator-form__input--readonly {
+    background-color: var(--bg);
+    cursor: not-allowed;
+}
+
+.calculator-form__helper {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--text-gray);
+    margin-top: var(--spacing-xs);
+}
+
+.calculator-form__field--checkbox {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.calculator-form__checkbox {
+    width: 1.25rem;
+    height: 1.25rem;
+    cursor: pointer;
+}
+
+.calculator-form__label--checkbox {
+    margin-bottom: 0;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+/* ========================================
+   Transport Mode Grid
+   ======================================== */
+.calculator-form__transport {
+    border: none;
+    margin-bottom: var(--spacing-md);
+}
+
+.calculator-form__legend {
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-dark);
+}
+
+.calculator-form__transport-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-sm);
+    row-gap: var(--spacing-md);
+}
+
+@media (min-width: 600px) {
+    .calculator-form__transport-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .calculator-form__transport-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+.calculator-form__transport-option {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-sm);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.calculator-form__transport-option:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.calculator-form__radio {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.calculator-form__radio:checked + .calculator-form__transport-icon {
+    /* Checked state styling via sibling */
+}
+
+.calculator-form__transport-option:has(.calculator-form__radio:checked) {
+    border-color: var(--primary);
+    background-color: rgba(16, 185, 129, 0.1);
+}
+
+.calculator-form__transport-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.1em;
+    font-size: 2.2rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+/* Special stacked emoji for car types */
+.calculator-form__transport-icon--stack {
+    line-height: 1;
+    font-size: 2.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.1em;
+}
+
+.calculator-form__transport-text {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+/* ========================================
+   Submit Button
+   ======================================== */
+.calculator-form__submit {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius);
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.calculator-form__submit:hover {
+    background-color: var(--secondary);
+    transform: translateY(-2px);
+}
+
+.calculator-form__submit:disabled {
+    background-color: var(--text-gray);
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ========================================
+   Results Sections
+   ======================================== */
+.results,
+.comparation,
+.carbon-credits {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    padding: var(--spacing-xl);
+    margin: var(--spacing-lg) auto var(--spacing-xl);
+    max-width: 900px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.results__title,
+.comparation__title,
+.carbon-credits__title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+}
+
+/* ========================================
+   Results Cards
+   ======================================== */
+.results_cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.results_card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.results_card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.results_icon {
+    font-size: 2.5rem;
+    margin-right: var(--spacing-md);
+    flex-shrink: 0;
+}
+
+.results_data {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.results_label {
+    font-size: 0.875rem;
+    color: var(--text-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 600;
+}
+
+.results_value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+.results_card__icon--stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.1em;
+    font-size: 2.5rem;
+    line-height: 1;
+    margin-right: var(--spacing-md);
+    flex-shrink: 0;
+}
+
+.results_savings {
+    border-left: 4px solid var(--accent);
+    background: rgba(52, 211, 153, 0.1);
+    padding-left: calc(var(--spacing-lg) - 4px);
+}
+
+/* ========================================
+   Comparison Items
+   ======================================== */
+.comparision_item {
+    background: var(--white);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.comparision_item:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+}
+
+.comparision_item--selected {
+    border-color: var(--primary);
+    background: rgba(16, 185, 129, 0.05);
+    box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.1);
+}
+
+.comparision_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.comparision_mode {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.comparision_icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.comparision_label {
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.comparision_emission {
+    font-size: 0.875rem;
+    color: var(--text-gray);
+    margin: 0;
+    font-weight: 500;
+}
+
+.comparision_badge {
+    background: var(--primary);
+    color: var(--white);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.comparision_stats {
+    margin-bottom: var(--spacing-sm);
+}
+
+.comparision_percentage {
+    font-size: 0.875rem;
+    color: var(--text-gray);
+    margin: 0;
+    font-weight: 500;
+}
+
+.comparision_bar-container {
+    width: 100%;
+    height: 8px;
+    background: var(--border-color);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.comparision_bar {
+    height: 100%;
+    border-radius: var(--radius);
+    transition: width 0.5s ease;
+}
+
+.comparation_tip {
+    background: rgba(59, 130, 246, 0.1);
+    border-left: 4px solid var(--primary);
+    padding: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+}
+
+.comparation_tip strong {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+/* ========================================
+   Carbon Credits
+   ======================================== */
+.carbon-credits_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+}
+
+.carbon-credits_card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.carbon-credits_card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.carbon-credits_card__title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-gray);
+    margin-bottom: var(--spacing-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.carbon-credits_card__value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: var(--spacing-sm) 0;
+    display: block;
+}
+
+.carbon-credits_card__help {
+    font-size: 0.75rem;
+    color: var(--text-gray);
+    margin: 0;
+    font-weight: 500;
+}
+
+.carbon-credits_info {
+    border: 2px dashed var(--primary);
+    background: rgba(59, 130, 246, 0.05);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+}
+
+.carbon-credits_info strong {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.carbon-credits_info p {
+    line-height: 1.6;
+    color: var(--text-dark);
+    margin: var(--spacing-sm) 0 0 0;
+}
+
+.carbon-credits_button {
+    width: 100%;
+    padding: var(--spacing-lg);
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius-lg);
+    font-size: 1.125rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-md);
+}
+
+.carbon-credits_button:hover {
+    background-color: var(--secondary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* ========================================
+   Animations
+   ======================================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   Spinner Loading Animation
+   ======================================== */
+.spinner {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 4px solid var(--border-color);
+    border-top-color: var(--primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+@media (max-width: 767px) {
+    .header__title {
+        font-size: 1.5rem;
+    }
+
+    .calculator-form {
+        margin: var(--spacing-sm);
+        padding: var(--spacing-md);
+    }
+
+    .calculator-form__transport-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .calculator-form__transport-icon {
+        font-size: 2.5rem;
+    }
+
+    /* Results sections */
+    .results,
+    .comparation,
+    .carbon-credits {
+        padding: var(--spacing-lg);
+        margin: var(--spacing-md) auto var(--spacing-lg);
+    }
+
+    .results_cards {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .results_card {
+        padding: var(--spacing-md);
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .results_card__icon,
+    .results_card__icon--stack {
+        margin-right: 0;
+        margin-bottom: var(--spacing-sm);
+        font-size: 2rem;
+    }
+
+    .results_card__detail {
+        font-size: 1.25rem;
+    }
+
+    /* Comparison items */
+    .comparation_item {
+        padding: var(--spacing-md);
+    }
+
+    .comparation_item__header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-xs);
+    }
+
+    .comparation_item__mode {
+        width: 100%;
+    }
+
+    .comparation_item__badge {
+        align-self: flex-end;
+        margin-top: -2rem;
+    }
+
+    .comparation_item__stats {
+        text-align: left;
+        margin-top: var(--spacing-sm);
+    }
+
+    /* Carbon credits */
+    .carbon-credits_grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .carbon-credits_card {
+        padding: var(--spacing-lg);
+    }
+
+    .carbon-credits_card__value {
+        font-size: 2rem;
+    }
+
+    .carbon-credits_info {
+        padding: var(--spacing-md);
+    }
+
+    .carbon-credits_button {
+        padding: var(--spacing-md);
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .calculator-form__transport-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
